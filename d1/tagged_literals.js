@@ -1,4 +1,4 @@
-https://www.hackerrank.com/challenges/js10-template-literals/problem
+//https://www.hackerrank.com/challenges/js10-template-literals/problem
 
 function sides(literals, ...expressions) {
     const [a, p] = expressions;
