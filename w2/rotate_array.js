@@ -7,24 +7,26 @@ function rotateArray(arr){
     for(let i=0;i<arr.length;i++){
         const x = i%length;
         const y = Math.floor(i/length);
-        // tl corner
+        // anchor
         if(x ===1 && y ===1 ){
             temp[i] = test[i]
         }
+        // tl and ml
         else if((x ===0 && y === 0) || (x ==0 && y == 1 ) ){
             temp[i] = test[i+3] 
         }
-        // middle rows 
+        // br and mr 
         else if ((y == 2 && x == 2) || (y ==1 && x ==2)){
             temp[i] = test[i-3] 
         }
+        // top row
         else if(y == 0 && x > 0){
             temp[i] = test[i-1]
         }
+        // bottom row
         else if(y == 2 && x < 2){
             temp[i] = test[i+1]
         }
-        //br
     }
     return Object.values(temp)
 }
