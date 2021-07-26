@@ -1,5 +1,6 @@
 let test = [1,2,3,4,5,6,7,8,9]
-
+const allButtons = document.querySelectorAll('#btns > button');
+const btn5 = document.getElementById('btn5')
 function rotateArray(arr){
     let temp = { 
     }
@@ -30,11 +31,19 @@ function rotateArray(arr){
     }
     return Object.values(temp)
 }
-test = rotateArray(test)
-console.log(test)
-test = rotateArray(test)
-console.log(test)
-test = rotateArray(test)
-console.log(test)
-test = rotateArray(test)
-console.log(test)
+function handleRotate(){
+    let getCurrentOrder = [...allButtons].map(btn=>btn.innerHTML)
+    console.log(getCurrentOrder)
+    let newOrder = rotateArray(newOrder)
+    console.log(newOrder)
+}
+// test = rotateArray(test)
+// console.log(test)
+// test = rotateArray(test)
+// console.log(test)
+// test = rotateArray(test)
+// console.log(test)
+// test = rotateArray(test)
+// console.log(test)
+
+btn5.onclick = handleRotate
